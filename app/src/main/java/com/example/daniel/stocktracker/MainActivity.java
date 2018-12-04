@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
+/**import org.json.simple.JSONObject*/
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
@@ -26,5 +27,22 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MenuPage.class);
         startActivity(intent);
     }
+    /**
+    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+            Request.Method.GET,
+            "",
+            null,
+            new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(final JSONObject response) {
+                    Log.d(TAG, response.toString());
+                }
+            }, new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(final VolleyError error) {
+            Log.w(TAG, error.toString());
+        }
+    });
+     */
 
 }
